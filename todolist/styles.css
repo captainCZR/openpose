@@ -1,0 +1,106 @@
+:root {
+  color-scheme: light;
+  font-family: "Inter", "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, #f5f7ff, #e7f1ff);
+  color: #1f2937;
+}
+
+.app {
+  width: min(92vw, 560px);
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 20px 45px rgba(31, 41, 55, 0.12);
+  padding: 28px;
+}
+
+h1 {
+  margin: 0 0 18px;
+  font-size: 1.7rem;
+}
+
+.todo-form {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+}
+
+.todo-form input {
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 1rem;
+}
+
+button {
+  border: 0;
+  border-radius: 10px;
+  padding: 10px 14px;
+  background: #2563eb;
+  color: #fff;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.filters {
+  display: flex;
+  gap: 8px;
+  margin: 14px 0 6px;
+}
+
+.filter-btn {
+  background: #e2e8f0;
+  color: #334155;
+}
+
+.filter-btn.active {
+  background: #1d4ed8;
+  color: #fff;
+}
+
+.todo-list {
+  list-style: none;
+  padding: 0;
+  margin: 14px 0;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 10px 2px;
+}
+
+.todo-item label {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.todo-item.completed .text {
+  color: #94a3b8;
+  text-decoration: line-through;
+}
+
+.delete {
+  background: #ef4444;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+#clear-completed {
+  background: #64748b;
+}
