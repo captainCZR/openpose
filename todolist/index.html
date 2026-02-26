@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TodoList 应用</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <h1>📋 TodoList</h1>
+
+      <form id="todo-form" class="todo-form">
+        <input
+          id="todo-input"
+          type="text"
+          placeholder="输入你的待办事项..."
+          autocomplete="off"
+          required
+        />
+        <button type="submit">添加</button>
+      </form>
+
+      <section class="filters">
+        <button class="filter-btn active" data-filter="all">全部</button>
+        <button class="filter-btn" data-filter="active">未完成</button>
+        <button class="filter-btn" data-filter="completed">已完成</button>
+      </section>
+
+      <ul id="todo-list" class="todo-list" aria-live="polite"></ul>
+
+      <footer class="footer">
+        <span id="todo-count">0 项未完成</span>
+        <button id="clear-completed" type="button">清除已完成</button>
+      </footer>
+    </main>
+
+    <template id="todo-item-template">
+      <li class="todo-item">
+        <label>
+          <input class="toggle" type="checkbox" />
+          <span class="text"></span>
+        </label>
+        <button class="delete" type="button" aria-label="删除任务">删除</button>
+      </li>
+    </template>
+
+    <script src="app.js"></script>
+  </body>
+</html>
